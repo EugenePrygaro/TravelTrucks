@@ -18,6 +18,7 @@ export default function Header() {
             width={136}
             height={16}
             className={css.icon}
+            loading="eager"
           />
         </Link>
         <div className={css["header-links"]}>

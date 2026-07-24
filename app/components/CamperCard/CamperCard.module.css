@@ -1,0 +1,114 @@
+.card {
+    border-radius: 16px;
+    padding: 24px;
+    padding-right: 97px;
+    max-width: 888px;
+    height: 312px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--inputs);
+}
+
+.image {
+    border-radius: 16px;
+    width: 219px;
+    height: 240px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%;
+
+    font-family: var(--font-family);
+    color: var(--main);
+    line-height: 150%;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subHeader {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    margin-top: -16px;
+}
+
+.icon {
+    align-self: center;
+}
+
+
+.title,
+.price {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 133%;
+}
+
+.rating,
+.location {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.description {
+    font-weight: 400;
+    color: var(--text);
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.badges {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.badge {
+    display: flex;
+    gap: 8px;
+    border-radius: 100px;
+    padding: 12px 18px;
+    width: 100%;
+    height: 48px;
+    background: var(--badges);
+    mix-blend-mode: multiply;
+
+    text-transform: capitalize;
+}
+
+.button {
+    border-radius: 200px;
+    padding: 16px 60px;
+
+    background: var(--grey-green);
+
+    font-weight: 500;
+    color: var(--white);
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--green-hover);
+}
+
+.button:active {
+    background-color: var(--grey-green);
+}

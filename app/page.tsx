@@ -2,6 +2,7 @@
 
 import styles from "./Home.module.css";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Home() {
   const router = useRouter();
@@ -13,12 +14,9 @@ export default function Home() {
         <p className={styles.text}>
           You can find everything you want in our catalog
         </p>
-        <button
-          className={styles.button}
-          onClick={() => router.push("/catalog")}
-        >
+        <Link className={styles.button} href="/catalog">
           View Now
-        </button>
+        </Link>
       </div>
     </section>
   );
