@@ -1,0 +1,37 @@
+.header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 64px;
+}
+
+.header-links {
+    align-items: center;
+    display: flex;
+    margin-left: 450px;
+    gap: 32px;
+}
+
+.header-links .link {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--main);
+
+    transition: color 0.3s ease;
+}
+
+.header-links .active {
+    color: var(--green-hover);
+}
+
+.header-links .link:hover,
+.header-links .link:focus {
+    color: var(--grey-green);
+}
+
+.header-links .link:active {
+    color: var(--main);
+}

@@ -20,8 +20,17 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   color: var(--text);
   background-color: var(--white);
+}
+
+.container {
+  display: block;
+  padding: 0 64px;
 }
