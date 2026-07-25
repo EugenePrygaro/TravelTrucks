@@ -1,12 +1,9 @@
 "use client";
 
 import styles from "./Home.module.css";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function Home() {
-  const router = useRouter();
-
   return (
     <section className={styles.hero}>
       <div className={`${styles["home-container"]} container`}>
