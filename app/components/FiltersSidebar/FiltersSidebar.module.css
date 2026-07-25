@@ -1,0 +1,223 @@
+.container {
+    padding: 24px;
+}
+
+.label {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gray);
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.inputWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input {
+    width: 100%;
+    border-radius: 12px;
+    padding: 18px 18px 18px 48px;
+    background: var(--white);
+    color: var(--gray);
+
+    border: 0px solid transparent;
+    outline: none;
+    box-sizing: border-box;
+
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 1;
+
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.input:hover,
+.input:focus,
+.input:not(:placeholder-shown),
+.inputWrapper:focus-within .input {
+    color: var(--main);
+    border-color: var(--main);
+}
+
+.inputWrapper:hover .icon,
+.inputWrapper:focus-within .icon,
+.input:not(:placeholder-shown) .icon {
+    opacity: 1;
+}
+
+.title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--main);
+    margin: 40px 0 24px 0;
+}
+
+.fieldset {
+    margin-bottom: 24px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+}
+
+.legend {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gray);
+
+    margin-bottom: 8px;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radioInput {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.customRadio {
+    width: 22px;
+    height: 22px;
+    border: 1px solid #475467;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.customRadio::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    background-color: #475467;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+}
+
+.radioInput:checked+.customRadio::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.labelText {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--main);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 48px;
+}
+
+
+.searchButton {
+    border-radius: 200px;
+    padding: 16px 60px;
+    background: var(--grey-green);
+    width: 100%;
+    border: none;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: var(--white);
+    font-family: var(--font-family);
+
+    transition: background-image 0.3s ease;
+}
+
+.searchButton:hover,
+.searchButton:focus {
+    background-color: var(--green-hover);
+}
+
+.searchButton:active {
+    background-color: var(--grey-green);
+}
+
+.resetButton {
+    border-radius: 200px;
+    padding: 16px 32px;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    width: 100%;
+
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    color: var(--main);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+
+    transition: border 0.3s ease;
+}
+
+
+
+.resetButton:hover,
+.resetButton:focus {
+    border: 1px solid var(--green-hover);
+}
+
+.resetButton:active {
+    border: 1px solid var(--gray-light);
+}
+
+.errorMessage {
+    color: #9d3327;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 4px;
+    display: block;
+    margin-left: 8px;
+}

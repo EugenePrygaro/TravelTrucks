@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.list>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 32px;
+}
+
+.loadMoreBtn {
+    border: 1px solid var(--gray-light);
+    border-radius: 200px;
+    padding: 16px 32px;
+
+
+    transition: border 0.3s ease;
+}
+
+.loadMoreBtn:hover,
+.loadMoreBtn:focus {
+    border: 1px solid var(--green-hover);
+}
+
+.loadMoreBtn:active {
+    border: 1px solid var(--gray-light)
+}

@@ -1,0 +1,15 @@
+.campersPage {
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+    padding: 48px 64px 120px 64px;
+}
+
+.filters {
+    border-radius: 20px;
+    padding: 24px;
+    width: 360px;
+    height: 100%;
+
+    background: var(--inputs);
+}

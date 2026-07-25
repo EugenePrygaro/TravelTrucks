@@ -4,6 +4,7 @@ import "modern-normalize/modern-normalize.css";
 import "./globals.css";
 import QueryProvider from "@/components/providers/QueryProvider";
 import Header from "@/components/Header/Header";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Travel Trucks",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <QueryProvider>
           <Header />
           {children}
+          <Toaster position="top-right" reverseOrder={false} />
         </QueryProvider>
       </body>
     </html>
