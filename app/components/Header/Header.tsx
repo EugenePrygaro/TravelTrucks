@@ -13,7 +13,7 @@ export default function Header() {
       <div className={css["header-content"]}>
         <Link href="/" className={css.logo}>
           <Image
-            src="/Icons/TravelTrucks.svg"
+            src="/icons/TravelTrucks.svg"
             alt="Logo"
             width={136}
             height={16}
