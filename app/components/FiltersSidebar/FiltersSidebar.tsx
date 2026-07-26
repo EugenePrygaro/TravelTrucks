@@ -7,6 +7,7 @@ import { getFilters } from "@/lib/api/clientApi";
 import { type Filters } from "@/types/filters";
 import { useQuery } from "@tanstack/react-query";
 import * as Yup from "yup";
+import { formatLabel } from "@/lib/utils";
 
 export type FilterValues = {
   location: string;
@@ -25,9 +26,6 @@ export const initialValues: FilterValues = {
 export const filtersSchema = Yup.object().shape({
   location: Yup.string().trim().max(50, "Too long"),
 });
-
-const formatLabel = (str: string) =>
-  str.replace("_", " ").replace(/\b\w/g, (l) => l.toUpperCase());
 
 interface FiltersSidebarProps {
   onSearch: (filters: FilterValues) => void;

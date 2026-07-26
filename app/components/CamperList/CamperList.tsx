@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import CamperCard from "@/components/CamperCard/CamperCard";
 import LoadingModal from "@/components/LoadingModal/LoadingModal";
+import styles from "@/components/LoadingModal/LoadingModal.module.css";
 import EmptyState from "@/components/EmptyState/EmptyState";
 import { getCampers } from "@/lib/api/clientApi";
 import type { CampersResponse } from "@/types/camper";
@@ -63,7 +64,15 @@ export default function CamperList({
     }
   }, [isError, error]);
 
-  if (isLoading) return <LoadingModal />;
+  if (isLoading)
+    return (
+      <LoadingModal>
+        <p className={styles.textModal}>Loading tracks...</p>
+        <p className={styles.subtextModal}>
+          Please wait while we fetch the best travel trucks for you
+        </p>
+      </LoadingModal>
+    );
 
   return (
     <div className={css.content}>
@@ -82,7 +91,7 @@ export default function CamperList({
                   ref={isLastPage ? lastElementRef : null}
                 >
                   {page.campers.map((camper) => (
-                    <CamperCard key={camper.id} {...camper} />
+                    <CamperCard key={camper.id} camper={camper} />
                   ))}
                 </div>
               );

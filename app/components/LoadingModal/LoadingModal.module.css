@@ -40,8 +40,8 @@
     }
 }
 
-.text,
-.subtext {
+.textModal,
+.subtextModal {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 24px;
@@ -50,6 +50,6 @@
     color: var(--main);
 }
 
-.subtext {
+.subtextModal {
     font-size: 16px;
 }

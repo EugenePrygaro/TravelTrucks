@@ -13,20 +13,19 @@ export type Camper = {
   consumption: string;
   transmission: string;
   engine: string;
-  amenities: {
-    ac: boolean;
-    bathroom: boolean;
-    kitchen: boolean;
-    tv: boolean;
-    radio: boolean;
-    refrigerator: boolean;
-    microwave: boolean;
-    gas: boolean;
-    water: boolean;
-  };
-  coverImage: string;
+  amenities: string[]
+  gallery?: CamperGalleryObject[],
+  coverImage?: string,
   totalReviews: number;
 };
+
+export type CamperGalleryObject = {
+    id: string,
+    camperId: string,
+    thumb: string,
+    original: string,
+    order: number
+}
 
 export type CampersResponse = {
     page: number,

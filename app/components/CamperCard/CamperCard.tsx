@@ -1,26 +1,20 @@
 import css from "./CamperCard.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { getCamperCoverImage } from "@/lib/utils";
+import { Camper } from "@/types/camper";
 
 interface CamperCardProps {
-  id: string;
-  name: string;
-  price: number;
-  rating: number;
-  totalReviews: number;
-  location: string;
-  description: string;
-  form: string;
-  transmission: string;
-  engine: string;
-  coverImage: string;
+  camper: Camper;
 }
 
-export default function CamperCard(camper: CamperCardProps) {
+export default function CamperCard({ camper }: CamperCardProps) {
+  const imageUrl = getCamperCoverImage(camper);
+
   return (
     <div className={css.card}>
       <Image
-        src={camper.coverImage}
+        src={imageUrl}
         alt={camper.description}
         width={219}
         height={240}

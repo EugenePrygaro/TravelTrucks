@@ -1,14 +1,19 @@
-import css from "./LoadingModal.module.css";
+import styles from "./LoadingModal.module.css";
 
-export default function LoadingModal() {
+interface LoadingModalProps {
+  children?: React.ReactNode;
+}
+
+export default function LoadingModal({ children }: LoadingModalProps) {
   return (
-    <div className={css.backdrop}>
-      <div className={css.modal}>
-        <div className={css.spinner} />
-        <p className={css.text}>Loading tracks...</p>
-        <p className={css.subtext}>
-          Please wait while we fetch the best travel trucks for you
-        </p>
+    <div className={styles.backdrop}>
+      <div className={styles.modal}>
+        <div className={styles.spinner} />
+        {children ? (
+          <>{children}</>
+        ) : (
+          <p className={styles.defaultText}>Loading, please wait...</p>
+        )}
       </div>
     </div>
   );
