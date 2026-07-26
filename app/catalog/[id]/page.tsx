@@ -10,6 +10,7 @@ import { formatLabel } from "@/lib/utils";
 
 import { getCamperById, getReviews } from "@/lib/api/clientApi";
 import CamperGallery from "@/components/CamperGallery/CamperGallery";
+import BookingForm from "@/components/BookingForm/BookingForm";
 
 export default function CamperDetails() {
   const params = useParams();
@@ -186,7 +187,13 @@ export default function CamperDetails() {
             <p>No reviews yet.</p>
           )}
         </div>
-        <div className={css.bookBlock}></div>
+        <div className={css.bookBlock}>
+          <h3 className={css.bookingTitle}>Book your campervan now</h3>
+          <p className={css.bookingText}>
+            Stay connected! We are always ready to help you.
+          </p>
+          <BookingForm camperId={id} />
+        </div>
       </div>
     </div>
   );

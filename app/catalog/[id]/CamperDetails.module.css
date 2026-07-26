@@ -201,7 +201,25 @@
 }
 
 .bookBlock {
-    width: 641px;
-    height: 430px;
-    background-color: aqua;
+    width: 100%;
+    border: 1px solid var(--gray-light);
+    border-radius: 16px;
+    padding: 44px;
+}
+
+.bookingTitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--main);
+    margin-bottom: 8px;
+}
+
+.bookingText {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gray);
+
+    margin-bottom: 24px;
 }

@@ -31,3 +31,12 @@ export async function getReviews(id: string): Promise<Review[]> {
     return res.data;
 }
 
+type bookingData = {
+    name: string,
+    email: string,
+}
+
+export async function createBookingRequest(data: bookingData, id:string): Promise<string> {
+    const res = await axios.post(`${BASE_URL}/campers/${id}/booking-requests`, data)
+     return res.data;
+}
