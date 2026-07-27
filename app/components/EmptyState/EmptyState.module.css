@@ -1,59 +1,70 @@
 .container {
     border-radius: 16px;
-    padding: 24px;
-    width: 888px;
-    height: 840px;
-
+    padding: 24px 16px;
+    width: 100%;
+    max-width: 888px;
     background: var(--inputs);
-
     text-align: center;
     font-family: var(--font-family);
     color: var(--main);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    object-fit: contain;
 }
 
 .title {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 133%;
-
-    margin: 21px 0 16px 0;
+    margin: 16px 0 12px 0;
 }
 
 .text {
     font-weight: 500;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
-    margin: 0 auto;
-    margin-bottom: 43px;
-
+    margin: 0 auto 24px auto;
     max-width: 424px;
-
 }
 
 .buttonsContainer {
     display: flex;
-    gap: 16px;
+    flex-direction: column;
+    gap: 12px;
     justify-content: center;
     align-items: center;
+    width: 100%;
+}
+
+.clearFiltersButton,
+.viewAllButton {
+    width: 100%;
+    /* Кнопки на всю ширину на мобільних */
+    max-width: 280px;
+    justify-content: center;
 }
 
 .clearFiltersButton {
     border: 1px solid var(--gray-light);
     border-radius: 200px;
-    padding: 16px 32px;
-
+    padding: 14px 24px;
     background: var(--white);
-
     display: flex;
-    justify-content: center;
     align-items: center;
-
+    gap: 8px;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 150%;
     letter-spacing: -0.01em;
     color: var(--main);
-
     transition: border 0.3s ease;
 }
 
@@ -68,16 +79,14 @@
 
 .viewAllButton {
     border-radius: 200px;
-    padding: 16px 40px;
-
+    padding: 14px 28px;
     background: var(--grey-green);
     border: none;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 150%;
     letter-spacing: -0.01em;
     color: var(--white);
-
     transition: background-color 0.3s ease;
 }
 
@@ -88,4 +97,51 @@
 
 .viewAllButton:active {
     background-color: var(--grey-green);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 24px;
+        width: 888px;
+        height: 840px;
+        display: block;
+    }
+
+    .image {
+        width: 488px;
+        height: 463px;
+        max-width: none;
+    }
+
+    .title {
+        font-size: 24px;
+        margin: 21px 0 16px 0;
+    }
+
+    .text {
+        font-size: 16px;
+        margin-bottom: 43px;
+    }
+
+    .buttonsContainer {
+        flex-direction: row;
+        width: auto;
+    }
+
+    .clearFiltersButton,
+    .viewAllButton {
+        width: auto;
+        max-width: none;
+    }
+
+    .clearFiltersButton {
+        padding: 16px 32px;
+        font-size: 16px;
+    }
+
+    .viewAllButton {
+        padding: 16px 40px;
+        font-size: 16px;
+    }
 }

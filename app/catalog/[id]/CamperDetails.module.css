@@ -1,5 +1,5 @@
 .container {
-    padding: 64px;
+    padding: 24px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,15 +8,18 @@
     font-family: var(--font-family);
     color: var(--main);
     line-height: 150%;
-
-    gap: 100px;
+    gap: 40px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .contentSection {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-
+    align-items: center;
     gap: 24px;
+    width: 100%;
 }
 
 .gallery {
@@ -24,10 +27,12 @@
 }
 
 .mainInfo {
-    height: 680px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
-
-
 
 .titlesBlock,
 .vehicleDetailsBlock {
@@ -38,32 +43,33 @@
     width: 100%;
 
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px 16px;
     background: var(--inputs);
     gap: 16px;
+    box-sizing: border-box;
 }
 
 .titlesBlock {
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 
 .subHeader {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     gap: 16px;
-    margin-top: -8px;
+    margin-top: 0;
 }
 
 .icon {
     align-self: center;
 }
 
-
 .title,
 .price {
     font-weight: 600;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 133%;
 }
 
@@ -72,34 +78,35 @@
     display: flex;
     justify-content: center;
     gap: 4px;
+    font-size: 14px;
 }
 
 .description {
     font-weight: 400;
     color: var(--text);
     margin-top: 8px;
+    font-size: 14px;
 }
 
 .badges {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 12px 8px;
-
+    gap: 8px;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .badge {
     display: flex;
     gap: 8px;
     border-radius: 100px;
-    padding: 12px 18px;
-    height: 48px;
+    padding: 10px 14px;
+    height: auto;
     background: var(--badges);
     mix-blend-mode: multiply;
-
     text-wrap: nowrap;
-
+    font-size: 14px;
 }
 
 .grayline {
@@ -114,7 +121,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    gap: 8px;
+    gap: 12px;
 }
 
 .row {
@@ -125,18 +132,18 @@
 
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 150%;
-    text-align: center;
     color: var(--main);
 }
 
-
 .overviewSection {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 48px;
+    gap: 40px;
+    width: 100%;
 }
 
 .reviewsBlock,
@@ -144,6 +151,7 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    width: 100%;
 }
 
 .review {
@@ -151,7 +159,8 @@
     padding: 16px;
     background: var(--inputs);
     width: 100%;
-    height: 100%;
+    height: auto;
+    box-sizing: border-box;
 }
 
 .reviewer {
@@ -162,8 +171,8 @@
 
 .avatar {
     border-radius: 60px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 .starsRating {
@@ -173,11 +182,10 @@
     margin-top: 4px;
 }
 
-
 .starWrapper {
     position: relative;
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
 }
 
 .starGold {
@@ -193,23 +201,23 @@
     width: 100%;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: var(--text);
-
-    margin-top: 16px;
+    margin-top: 12px;
 }
 
 .bookBlock {
     width: 100%;
     border: 1px solid var(--gray-light);
     border-radius: 16px;
-    padding: 44px;
+    padding: 24px 16px;
+    box-sizing: border-box;
 }
 
 .bookingTitle {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 120%;
     color: var(--main);
     margin-bottom: 8px;
@@ -217,9 +225,113 @@
 
 .bookingText {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
     color: var(--gray);
+    margin-bottom: 20px;
+}
 
-    margin-bottom: 24px;
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding: 64px;
+        gap: 100px;
+    }
+
+    .contentSection {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 24px;
+    }
+
+    .gallery {
+        width: auto;
+    }
+
+    .mainInfo {
+        height: 680px;
+        width: auto;
+    }
+
+    .titlesBlock,
+    .vehicleDetailsBlock {
+        padding: 24px;
+    }
+
+    .titlesBlock {
+        margin-bottom: 16px;
+    }
+
+    .subHeader {
+        flex-wrap: nowrap;
+        margin-top: -8px;
+    }
+
+    .title,
+    .price {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .badge {
+        padding: 12px 18px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .subDetailsList {
+        gap: 8px;
+    }
+
+    .row {
+        font-size: 16px;
+    }
+
+    .overviewSection {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 48px;
+    }
+
+    .reviewsBlock {
+        width: 50%;
+    }
+
+    .review {
+        height: 100%;
+    }
+
+    .avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .starWrapper {
+        width: 16px;
+        height: 16px;
+    }
+
+    .reviewComment {
+        font-size: 16px;
+        margin-top: 16px;
+    }
+
+    .bookBlock {
+        width: 50%;
+        padding: 44px;
+    }
+
+    .bookingTitle {
+        font-size: 20px;
+    }
+
+    .bookingText {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
 }
